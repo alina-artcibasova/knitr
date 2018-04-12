@@ -276,7 +276,7 @@ eng_tikz = function(options) {
     # convert to the desired output-format, calling `convert`
     conv = 0
     if (ext != 'pdf') {
-      conv = system(sprintf('"C:\\Program Files\\ImageMagick-7.0.7-Q16\\convert.exe" %s %s.%s', fig, fig, ext))
+      conv = system(sprintf('"C:\\Program Files\\ImageMagick-7.0.7-Q16\\convert.exe" %s.pdf %s.%s', fig, fig, ext))
     }
   }
   if (conv != 0 && !options$error) stop('Failed to compile ', fig, ' to ', fig2)
