@@ -277,7 +277,7 @@ eng_tikz = function(options) {
     conv = 0
     if (ext != 'pdf') {
       library("animation")
-      conv = im.convert(fig, output = sprintf('%s.%s', tools::file_path_sans_ext(fig), ext), , extra.opts="-density 150")
+      conv = im.convert(fig, output = sprintf('%s.%s', tools::file_path_sans_ext(fig), ext), extra.opts="-density 150")
     }
   }
   if (conv != 0 && !options$error) stop('Failed to compile ', fig, ' to ', fig2)
