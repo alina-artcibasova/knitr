@@ -275,11 +275,11 @@ eng_tikz = function(options) {
   } else {
     # convert to the desired output-format, calling `convert`
     conv = 0
-    if (ext != 'pdf') {
+    #if (ext != 'pdf') {
       #library("animation")
       #conv = im.convert(fig, output = sprintf('%s.%s', tools::file_path_sans_ext(fig), ext), extra.opts="-quality 60 -density 300")
       conv = system(sprintf('"C:\\Program Files\\ImageMagick-7.0.7-Q16\\convert.exe" -quality 60 -density 300 %s %s.%s', fig, tools::file_path_sans_ext(fig), ext))
-    }
+    #}
   }
   if (conv != 0 && !options$error) stop('Failed to compile ', fig, ' to ', fig2)
   #print(conv)
