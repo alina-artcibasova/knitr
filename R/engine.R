@@ -282,8 +282,8 @@ eng_tikz = function(options) {
     }
   }
   if (conv != 0 && !options$error) stop('Failed to compile ', fig, ' to ', fig2)
-  print(conv)
-  print(options$error)
+  #print(conv)
+  #print(options$error)
   fig = fig2
 
   options$fig.num = 1L; options$fig.cur = 1L
