@@ -9,4 +9,4 @@ it seems that Windows interprets it as 'convert.exe' from System32 directory (ht
 
 ## Installation
 
-devtools::install_github('alinart/knitr')
+devtools::install_github('darthaline/knitr')
